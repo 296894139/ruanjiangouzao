@@ -179,7 +179,7 @@ public class HuiTu extends JFrame {
                  //圆
                  Pen.setColor(Color.YELLOW);
                  for(int i=0;i<list.get(list.size()-1).size()-3;i=i+2){
-                     if(i>=2){
+                     if(list.get(list.size()-1).size()>=4){
                          Pen.drawLine(list.get(list.size()-1).get(i), list.get(list.size()-1).get(i+1),list.get(list.size()-1).get(i+2), list.get(list.size()-1).get(i+3));
                      }
                  }
@@ -194,14 +194,14 @@ public class HuiTu extends JFrame {
                  Pen.setColor(Color.red);
                  for(int i=0;i<list.get(list.size()-1).size()-3;i=i+2){
 
-                     if(i>=2){
+                     if(list.get(list.size()-1).size()>=4){
                          Pen.drawLine(list.get(list.size()-1).get(i), list.get(list.size()-1).get(i+1),list.get(list.size()-1).get(i+2), list.get(list.size()-1).get(i+3));
                      }
 
                  }
 
                  for(int i=0;i<list.get(list.size()-2).size()-3;i=i+2){
-                     if(i>=2){
+                     if(list.get(list.size()-2).size()>=4){
                          Pen.drawLine(list.get(list.size()-2).get(i), list.get(list.size()-2).get(i+1),list.get(list.size()-2).get(i+2), list.get(list.size()-2).get(i+3));
                      }
 
@@ -219,20 +219,20 @@ public class HuiTu extends JFrame {
 
                  Pen.setColor(Color.blue);
                  for(int i=0;i<list.get(list.size()-1).size()-3;i=i+2){
-                     if(i>=2){
+                     if(list.get(list.size()-1).size()>=4){
                          Pen.drawLine(list.get(list.size()-1).get(i), list.get(list.size()-1).get(i+1),list.get(list.size()-1).get(i+2), list.get(list.size()-1).get(i+3));
                      }
 
                  }
                  for(int i=0;i<list.get(list.size()-2).size()-3;i=i+2){
 
-                     if(i>=2){
+                     if(list.get(list.size()-2).size()>=4){
                          Pen.drawLine(list.get(list.size()-2).get(i), list.get(list.size()-2).get(i+1),list.get(list.size()-2).get(i+2), list.get(list.size()-2).get(i+3));
                      }
 
                  }
                  for(int i=0;i<list.get(list.size()-3).size()-3;i=i+2){
-                     if(i>=2){
+                     if(list.get(list.size()-3).size()>=4){
                          Pen.drawLine(list.get(list.size()-3).get(i), list.get(list.size()-3).get(i+1),list.get(list.size()-3).get(i+2), list.get(list.size()-3).get(i+3));
                      }
 
@@ -247,25 +247,25 @@ public class HuiTu extends JFrame {
                  //正方形
                  Pen.setColor(Color.green);
                  for(int i=0;i<list.get(list.size()-1).size()-3;i=i+2){
-                     if(i>=2){
+                     if(list.get(list.size()-1).size()>=4){
                          Pen.drawLine(list.get(list.size()-1).get(i), list.get(list.size()-1).get(i+1),list.get(list.size()-1).get(i+2), list.get(list.size()-1).get(i+3));
                      }
 
                  }
                  for(int i=0;i<list.get(list.size()-2).size()-3;i=i+2){
-                     if(i>=2){
+                     if(list.get(list.size()-2).size()>=4){
                          Pen.drawLine(list.get(list.size()-2).get(i), list.get(list.size()-2).get(i+1),list.get(list.size()-2).get(i+2), list.get(list.size()-2).get(i+3));
                      }
 
                  }
                  for(int i=0;i<list.get(list.size()-3).size()-3;i=i+2){
-                     if(i>=2){
+                     if(list.get(list.size()-3).size()>=4){
                          Pen.drawLine(list.get(list.size()-3).get(i), list.get(list.size()-3).get(i+1),list.get(list.size()-3).get(i+2), list.get(list.size()-3).get(i+3));
                      }
 
                  }
                  for(int i=0;i<list.get(list.size()-4).size()-3;i=i+2){
-                     if(i>=2){
+                     if(list.get(list.size()-4).size()>=4){
                          Pen.drawLine(list.get(list.size()-4).get(i), list.get(list.size()-4).get(i+1),list.get(list.size()-4).get(i+2), list.get(list.size()-4).get(i+3));
                      }
 
