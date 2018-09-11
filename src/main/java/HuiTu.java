@@ -27,13 +27,20 @@ public class HuiTu extends JFrame {
         setJMenuBar(bar);
         JMenu menu = new JMenu("文件");
         JMenu menu2 = new JMenu("操作");
-        JMenuItem newf = new JMenuItem("新建");
-        newf.setAccelerator(KeyStroke.getKeyStroke("ctrl N"));
+        JMenuItem clear = new JMenuItem("清屏");
+        clear.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.Event.CTRL_MASK));
+        clear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                clearAll();
+            }
+        });
         JMenuItem save=new JMenuItem("保存");
+        save.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.Event.CTRL_MASK));
         JMenuItem open = new JMenuItem("打开");
         JMenuItem draw=new JMenuItem("开始");
         final JMenuItem distinguish=new JMenuItem("分辨");
-        distinguish.setAccelerator(KeyStroke.getKeyStroke("ctrl t"));
+        distinguish.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.Event.CTRL_MASK));
         menu2.add(distinguish);
         open.addActionListener(new ActionListener() {
             @Override
@@ -65,7 +72,7 @@ public class HuiTu extends JFrame {
                   distinguish();
             }
         });
-        menu.add(newf);
+        menu2.add(clear);
         menu.add(open);
         menu.add(save);
 
@@ -124,7 +131,7 @@ public class HuiTu extends JFrame {
 
         setVisible(true);
     }
-    public static void InitializationFile(String FileName){
+    public  void InitializationFile(String FileName){
         ArrayList<ArrayList<Integer>> list0=Save_Access.access(FileName);
           clearAll();
         list=list0;
@@ -149,8 +156,9 @@ public class HuiTu extends JFrame {
                 }
 
                 for(;i<u;i++){
-                    for(int t=0;t<list0.get(i).size()-1;t=t+2){
-                        Pen.fillOval(list0.get(i).get(t),list0.get(i).get(t+1),3,3);
+                    for(int t=0;t<list0.get(i).size()-3;t=t+2){
+                       // Pen.fillOval(list0.get(i).get(t),list0.get(i).get(t+1),3,3);
+                        Pen.drawLine(list0.get(i).get(t), list0.get(i).get(t+1),list0.get(i).get(t+2), list0.get(i).get(t+3));
                     }
                 }
                 i=u;
@@ -162,15 +170,16 @@ public class HuiTu extends JFrame {
         }
 
      }
-     public static void clearAll(){
+     public  void clearAll(){
         if(Pen==null) return;
-         Pen.setColor(Color.white);
+         Pen.setColor(this.getBackground());
          for(int i=0;i<list.size();i++){
-             for(int u=0;u<list.get(i).size()-1;u=u+2){
-                    Pen.fillOval(list.get(i).get(u),list.get(i).get(u+1),3,3);
-
+             for(int u=0;u<list.get(i).size()-3;u=u+2){
+                   // Pen.fillOval(list.get(i).get(u),list.get(i).get(u+1),3,3);
+                 Pen.drawLine(list.get(i).get(u), list.get(i).get(u+1),list.get(i).get(u+2), list.get(i).get(u+3));
              }
          }
+         list=new ArrayList<ArrayList<Integer>>();
          Pen.setColor(Color.black);
      }
      public static void distinguish(){
