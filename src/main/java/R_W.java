@@ -71,7 +71,7 @@ public class R_W {
          return list;
     }
     public static ArrayList<Object> getFileNames(){
-        File file = new File("C:\\Users\\T5\\_xjh\\src\\main\\File");
+        File file = new File("C:\\Users\\T5\\ruanjiangouzao\\src\\main\\File");
         // 获得该文件夹内的所有文件
         File[] array = file.listFiles();
         ArrayList<Object> result=new ArrayList<Object>();
@@ -86,21 +86,7 @@ public class R_W {
     }
     public static void main(String[] args) {
 
-
-        File file = new File("C:\\Users\\T5\\_xjh\\src\\main\\File");
-        // 获得该文件夹内的所有文件
-        File[] array = file.listFiles();
-        for(int i=0;i<array.length;i++){
-            System.out.println(array[i].getName());
-        }
-
-      //  ArrayList<ArrayList<Integer>>t=read("C:\\Users\\T5\\_xjh\\src\\main\\File\\num");
-       // System.out.println(t.get(0).get(0));
-      /*  for(int i=0;i<t.size();i++){
-            for(int u=0;u<t.get(i).size();u++){
-                System.out.println(t.get(i).get(u));
-            }
-        }*/
-
+        ArrayList<ArrayList<Integer>> tem0=Save_Access.access("num");
+        System.out.println(tem0.get(0).get(0));
     }
 }

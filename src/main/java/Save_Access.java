@@ -3,21 +3,21 @@ import java.util.ArrayList;
 
 public class Save_Access {
     public static void save(String name, ArrayList<ArrayList<Integer>> list){
-          File file=new File("C:\\Users\\T5\\_xjh\\src\\main\\File",name);
+          File file=new File("C:\\Users\\T5\\ruanjiangouzao\\src\\main\\File",name);
           try{
               file.createNewFile();
               for(int i=0;i<list.size();i++) {
                   for (int u = 0; u < list.get(i).size(); u++) {
-                      R_W.write("C:\\Users\\T5\\_xjh\\src\\main\\File\\" + name, list.get(i).get(u) + "");
+                      R_W.write("C:\\Users\\T5\\ruanjiangouzao\\src\\main\\File\\" + name, list.get(i).get(u) + "");
                   }
-                  R_W.write("C:\\Users\\T5\\_xjh\\src\\main\\File\\" + name, ",");
+                  R_W.write("C:\\Users\\T5\\ruanjiangouzao\\src\\main\\File\\" + name, ",");
               }
           }catch (Exception e){
 
           }
     }
     public static ArrayList<ArrayList<Integer>> access(String name){
-        String fileName="C:\\Users\\T5\\_xjh\\src\\main\\File\\" + name;
+        String fileName="C:\\Users\\T5\\ruanjiangouzao\\src\\main\\File\\" + name;
         ArrayList<ArrayList<Integer>> list=R_W.read(fileName);
         return list;
     }
