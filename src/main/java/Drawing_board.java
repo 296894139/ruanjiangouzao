@@ -10,6 +10,11 @@ import java.util.ArrayList;
   长方形：红色
   三角形：蓝色
  */
+/**
+ *@创建人 徐介晖
+ *@创建时间 2018-9-15
+ *@描述   画板界面
+ */
 public class Drawing_board extends JFrame {
     static Graphics Pen;
     static Color backColor;
@@ -73,11 +78,13 @@ public class Drawing_board extends JFrame {
         });
         addMouseMotionListener(new MouseAdapter() {
             public void mouseDragged(MouseEvent e) {
+                System.out.println(e.getX()+" "+e.getY());
+
                 if (Pen == null) return;
-                tem.add(e.getX());
-                tem.add(e.getY());
+                tem.add(e.getX()-10);
+                tem.add(e.getY()-60);
                 if(tem.size()>=4){
-                    Pen.drawLine(tem.get(tem.size()-4),tem.get(tem.size()-3),e.getX(), e.getY());
+                    Pen.drawLine(tem.get(tem.size()-4),tem.get(tem.size()-3),e.getX()-10, e.getY()-60);
                 }
 
             }
@@ -173,8 +180,10 @@ public class Drawing_board extends JFrame {
          int tem_num=tem0.get(0).get(0)+1;
         //  System.out.println(tem_num);
          String name=InputFileName();
-         R_W.overwrite("C:\\Users\\T5\\ruanjiangouzao\\src\\main\\File\\num",tem_num+"");
-         R_W.write("C:\\Users\\T5\\ruanjiangouzao\\src\\main\\File\\num",",");
+         //C:\Users\T5\ruanjiangouzao\
+         R_W.overwrite("src\\main\\File\\num",tem_num+"");
+         //C:\Users\T5\ruanjiangouzao\
+         R_W.write("src\\main\\File\\num",",");
          Save_Access.save(name,list);
      }
      public String InputFileName(){

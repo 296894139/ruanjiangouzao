@@ -1,6 +1,10 @@
 import java.io.*;
 import java.util.ArrayList;
-
+/**
+ *@创建人 徐介晖
+ *@创建时间 2018-9-15
+ *@描述   相当于数据库的存储引擎，底层读写文件
+ */
 public class R_W {
 
     public static void write(String fileName, String content) {
@@ -71,7 +75,8 @@ public class R_W {
          return list;
     }
     public static ArrayList<Object> getFileNames(){
-        File file = new File("C:\\Users\\T5\\ruanjiangouzao\\src\\main\\File");
+        //C:\Users\T5\ruanjiangouzao\
+        File file = new File("src\\main\\File");
         // 获得该文件夹内的所有文件
         File[] array = file.listFiles();
         ArrayList<Object> result=new ArrayList<Object>();

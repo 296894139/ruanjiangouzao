@@ -1,6 +1,10 @@
 import java.awt.*;
 import java.util.ArrayList;
-
+/**
+ *@创建人 徐介晖
+ *@创建时间 2018-9-15
+ *@描述   对图形进行辨识
+ */
 public class Identification {
     public static void distinguish0(int strokes,ArrayList<ArrayList<Integer>> list,Graphics Pen){
         switch(strokes){
